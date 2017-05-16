@@ -1,0 +1,15 @@
+$brand-primary: #00afb5;
+$brand-secondary: #a30000;
+$brand-background: #f5f5f0;
+$brand-contrast-background: darken($brand-background, 5%);
+
+$gray-base: #000;
+
+$body-bg: $brand-background;
+
+$navbar-default-color: #fff;
+$navbar-default-bg: $brand-primary;
+
+$navbar-default-brand-color: #fff;
+
+$panel-bg: $brand-contrast-background;
