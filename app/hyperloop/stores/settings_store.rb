@@ -12,18 +12,9 @@ class SettingsStore < Hyperloop::Store
   end
 
   receives SetApiKey do
-    puts "received: SetApiKey"
-
-    puts "key: #{params.key}"
+    puts "SETTINGS_STORE: SetApiKey"
 
     LocalStorage['key'] = params.key
-
-    puts "stored in local"
-
     mutate.key(params.key)
-
-    puts "mutated key"
-
-    true
   end
 end

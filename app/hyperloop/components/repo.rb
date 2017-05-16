@@ -2,23 +2,23 @@ class Repo < Hyperloop::Router::Component
   param :repo, type: Hash
 
   before_mount do
-    puts "REPO: before_mount"
+    puts 'REPO: before_mount'
   end
 
   after_mount do
-    puts "REPO: after_mount"
+    puts 'REPO: after_mount'
   end
 
   before_update do
-    puts "REPO: before_update"
+    puts 'REPO: before_update'
   end
 
   before_unmount do
-    puts "REPO: before_unmount"
+    puts 'REPO: before_unmount'
   end
 
   render do
-    puts "REPO: render"
+    puts 'REPO: render'
     DIV(class: 'col-md-8 col-md-offset-2') do
       DIV(class: 'panel panel-primary') do
         DIV(class: 'panel-heading') do

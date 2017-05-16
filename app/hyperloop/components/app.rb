@@ -1,14 +1,19 @@
 class App < Hyperloop::Router
   history :browser
 
+  # TODO: note this doesn't work if defined as a method `def route`
   route do
     puts 'APP: route'
     DIV do
+
       NAV(class: 'navbar navbar-default') do
         DIV(class: 'container-fluid') do
-
           DIV(class: 'navbar-header') do
-            BUTTON(type: 'button', class: 'navbar-toggle collapsed', 'data-toggle' => 'collapse', 'data-target' => '#navbar-collapse-1', 'aria-expanded' => false) do
+            BUTTON(type: 'button',
+                   class: 'navbar-toggle collapsed',
+                   'data-toggle' => 'collapse',
+                   'data-target' => '#navbar-collapse-1',
+                   'aria-expanded' => false) do
               SPAN(class: 'sr-only') { 'Toggle navigation/span' }
               SPAN(class: 'icon-bar')
               SPAN(class: 'icon-bar')
@@ -19,12 +24,8 @@ class App < Hyperloop::Router
 
           DIV(class: 'collapse navbar-collapse', id: 'navbar-collapse-1') do
             UL(class: 'nav navbar-nav') do
-              LI(class: 'active') do
-                Link('/') { 'Repositories' }
-              end
-              LI() do
-                Link('/settings') { 'Settings' }
-              end
+              LI(class: 'inactive') { Link('/') { 'Repositories' } }
+              LI(class: 'inactive') { Link('/settings') { 'Settings' } }
             end
           end
         end
