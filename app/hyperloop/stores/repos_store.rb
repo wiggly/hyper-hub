@@ -1,7 +1,7 @@
 class ReposStore < Hyperloop::Store
   state items: [], scope: :class, reader: true
 
-  state error: nil, scope: :class, reader: true
+  state error: '', scope: :class, reader: true
 
   class SetItems < Hyperloop::Operation
     param :items

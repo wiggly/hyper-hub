@@ -18,6 +18,7 @@ class SettingsApp < Hyperloop::Router::Component
   render do
     puts 'SETTINGS_APP: render'
     DIV do
+      NavBar(location: location)
       Settings()
     end
   end

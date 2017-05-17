@@ -20,6 +20,7 @@ class ReposApp < Hyperloop::Router::Component
   render do
     puts 'REPOS_APP: render'
     DIV do
+      NavBar(location: location)
       Repos(repos: ReposStore.items, error: ReposStore.error)
     end
   end

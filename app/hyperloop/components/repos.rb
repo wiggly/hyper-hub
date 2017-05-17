@@ -1,6 +1,6 @@
 class Repos < Hyperloop::Router::Component
-  param :repos, type: [Hash]
-  param :error, type: String
+  param repos: [], type: [Hash]
+  param error: '', type: String
 
   before_mount do
     puts 'REPOS: before_mount'
