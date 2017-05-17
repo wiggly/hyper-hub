@@ -7,8 +7,10 @@ class App < Hyperloop::Router
     puts 'APP: route'
     DIV do
         # TODO: note that if we mount Repos here and pass in a store state as a param that it will not be correctly updated
-        Route('/', exact: true, mounts: ReposApp)
-        Route('/settings', mounts: SettingsApp)
+      Route('/', exact: true, mounts: ReposApp)
+      Route('/repos', exact: true, mounts: ReposApp)
+      Route('/repos/:owner/:name', mounts: RepoApp)
+      Route('/settings', mounts: SettingsApp)
     end
   end
 end

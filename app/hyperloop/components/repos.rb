@@ -33,7 +33,7 @@ class Repos < Hyperloop::Router::Component
       DIV(class: 'container') do
         params.repos.each do |repo|
           DIV(key: repo['id'], class: 'row') do
-            Repo(repo: repo)
+            RepoPanel(repo: repo)
           end
         end
       end
